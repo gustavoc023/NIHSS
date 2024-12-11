@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Score NIHSS (NIH Stroke Scale) - Ilustrado</title>
+    <title>National Institute of Health Stroke Scale)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -116,6 +116,22 @@
             background-color: #90ee90; /* Fundo verde claro */
             border-color: #00b300;    /* Borda verde escuro */
         }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header img {
+        content: url('NIHSS logo mobile.png'); /* Caminho para a imagem específica para mobile */
+      }
+
+      .buttons-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .buttons-container button {
+        width: 90%;
+      }
+    }
     </style>
 </head>
 <body>
@@ -1011,9 +1027,6 @@ function clearScores() {
         } else {
             idadeCampo.value = ''; // Limpa o campo se a data estiver vazia
         }
-    }
-</script>
-
 </script>
 
 </body>
