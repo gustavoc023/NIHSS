@@ -116,6 +116,39 @@
             background-color: #90ee90; /* Fundo verde claro */
             border-color: #00b300;    /* Borda verde escuro */
         }
+        
+    /* Mantém os botões com o mesmo layout no desktop e no mobile */
+    .button-container button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007BFF;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button-container button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilo específico para telas menores */
+    @media (max-width: 768px) {
+        .header-title img {
+            content: url('titulo-mobile.png'); /* Substitua pelo caminho da imagem para smartphones */
+        }
+
+        /* Ajusta os botões para ocupar toda a largura no mobile */
+        .button-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .button-container button {
+            width: 100%; /* Botões ocupam toda a largura no mobile */
+        }
+    }
     </style>
 </head>
 <body>
